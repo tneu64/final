@@ -1,0 +1,7 @@
+<h1> Concerts! </h1>
+
+<% for concert in @concerts %>
+    <p>
+        <a href="/concerts/<%= concert[:id] %>"><%= concert[:title]%></a>
+    </p>
+<% end %>

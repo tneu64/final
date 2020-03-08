@@ -1,0 +1,16 @@
+
+
+<div class="row">
+    <div class="col-md-8">
+        <h2><%= @concert[:title]%></h2>
+        <h4><%= @concert[:date]%></h2>
+        <p><%= @concert[:description]%></p>
+    </div>
+    <div class="col-md-4">
+        <h2><%= @concert[:title]%></h2>
+        <h4><%= @concert[:date]%></h2>
+        <p><%= @concert[:description]%></p>
+    </div>  
+    <div class="mt-5">
+        <a href="/concerts/<%= @concert[:id] %>/reviews/new" class="btn btn-primary">Leave a review!</a>
+</div>

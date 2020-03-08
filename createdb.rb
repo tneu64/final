@@ -5,31 +5,41 @@ DB = Sequel.connect(connection_string)                                          
 #######################################################################################
 
 # Database schema - this should reflect your domain model
-DB.create_table! :events do
+DB.create_table! :concerts do # this is my "places" model
   primary_key :id
   String :title
+  String :conductor
+  String :orchestra
   String :description, text: true
   String :date
   String :location
 end
-DB.create_table! :rsvps do
+
+DB.create_table! :reviews do # model associated to place
   primary_key :id
-  foreign_key :event_id
-  Boolean :going
+  foreign_key :concerts_id
+  #foreign_key :user_id
   String :name
   String :email
-  String :comments, text: true
+  String :comments, text: true #longer text 
+  String :location
 end
-
+#DB.create_table! :user do
+ #   primary_key :id
+#end   
 # Insert initial (seed) data
-events_table = DB.from(:events)
+concerts_table = DB.from(:concerts)
 
-events_table.insert(title: "Bacon Burger Taco Fest", 
-                    description: "Here we go again bacon burger taco fans, another Bacon Burger Taco Fest is here!",
-                    date: "June 21",
-                    location: "Kellogg Global Hub")
+concerts_table.insert(title: "Muti Conducts Beethoven 1 & 3", 
+                    conductor: "Riccardo Muti",
+                    orchestra: "Chicago Symphony Orchestra",
+                    description: "See title",
+                    date: "September 28, 2019",
+                    location: "Symphony Center, Orchestra Hall, Chicago")
 
-events_table.insert(title: "Kaleapolooza", 
-                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "July 4",
-                    location: "Nowhere")
+concerts_table.insert(title: "Muti Conducts Beethoven 4 & 7", 
+                    conductor: "Riccardo Muti",
+                    orchestra: "Chicago Symphony Orchestra",
+                    description: "See title",
+                    date: "April 30, 2020",
+                    location: "Symphony Center, Orchestra Hall, Chicago")
