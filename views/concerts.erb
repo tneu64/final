@@ -1,7 +1,20 @@
 <h1> Concerts! </h1>
-
+<h3> Celebrate Beethoven's 250th birthday by attending concerts around the world and sharing your thoughts with other fans! </h3>
 <% for concert in @concerts %>
-    <p>
+    <h3>
         <a href="/concerts/<%= concert[:id] %>"><%= concert[:title]%></a>
+    </h3>
+    <h4>
+        <%= concert[:date]%>
+    </h4>
+    <p>
+        <%= concert[:description]%>
     </p>
+    <iframe
+    width="600"
+    height="450"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAOaIED8aeDTnQjBi41Xp6gofwgk-UV4fs
+        &q=<%= concert[:location] %>" allowfullscreen>
+    </iframe>
 <% end %>

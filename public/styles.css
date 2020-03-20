@@ -1,0 +1,28 @@
+/* Typography */
+body {    
+    font-family: 'Lora', serif;
+    /* color: white; */
+    background-color:  rgb(183, 187, 190);    
+ 
+  .navbar-brand img {
+    width: 55px;
+    height: 55px;
+  }
+
+  }
+  /* Headers */
+  h1, h2 {
+    font-family: 'Lora', serif;
+    color: rgb(64, 4, 177);
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: black;
+
+  }
+  
+  
+
+
