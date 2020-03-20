@@ -16,7 +16,6 @@ after { puts; }                                                                 
 #######################################################################################
 
 maps_key = ENV['GOOGLE_MAPS_KEY']
-# AIzaSyAOaIED8aeDTnQjBi41Xp6gofwgk-UV4fs my key
 concerts_table = DB.from(:concerts)
 reviews_table = DB.from(:reviews)
 users_table = DB.from(:users)
