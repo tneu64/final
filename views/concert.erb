@@ -34,7 +34,7 @@
         width="600"
         height="450"
         frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAOaIED8aeDTnQjBi41Xp6gofwgk-UV4fs
+        src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_MAPS_KEY']%>
             &q=<%= @concert[:location] %>" allowfullscreen>
     </iframe>
 </div>
