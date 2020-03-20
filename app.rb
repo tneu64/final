@@ -19,7 +19,7 @@ maps_key = ENV['GOOGLE_MAPS_KEY']
 concerts_table = DB.from(:concerts)
 reviews_table = DB.from(:reviews)
 users_table = DB.from(:users)
-
+# key AIzaSyAOaIED8aeDTnQjBi41Xp6gofwgk-UV4fs
 
 before do
     @current_user = users_table.where(id: session["user_id"]).to_a[0]
