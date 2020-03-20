@@ -16,7 +16,7 @@ after { puts; }                                                                 
 #######################################################################################
 
 maps_key = ENV['GOOGLE_MAPS_KEY']
-
+# AIzaSyAOaIED8aeDTnQjBi41Xp6gofwgk-UV4fs my key
 concerts_table = DB.from(:concerts)
 reviews_table = DB.from(:reviews)
 users_table = DB.from(:users)
@@ -32,8 +32,7 @@ get "/" do # this is the index route
     pp concerts_table.all.to_a #get all data from concert table (copied from sequel cheatsheet)
      # list the concert using loop
     @concerts = concerts_table.all.to_a # first, store events in a var; next add loop to events.erb
-     
-
+    
     view "concerts"
 end
 
